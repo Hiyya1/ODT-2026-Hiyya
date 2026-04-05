@@ -65,7 +65,7 @@ By the final review, this README should clearly show:
 `Ethereal Flowers`
 
 ## 1.4 One-Line Pitch
-`A panel of blooming flowers which respond to the movement of your hand over them.`
+`A panel of blooming flowers which responds to the movement of your hand over it.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,7 +75,7 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project involves an interactive panel consisting of about 20 mechanised flowers. As the user moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the user, with a touch of whimsical magic and fairylike charm.
+`This project involves an interactive panel consisting of about 20 mechanised flowers. As the participant moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the participant, with a touch of whimsical magic and fairylike charm.
 The technologies involved in this project are ultrasonic sensors, servo motors, and LED lights, all controlled by a MicroPython code through an ESP32.`
 
 ---
@@ -102,7 +102,7 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[Write here]`
+`With this project, I seek to create a magical experience for the participant that allows them to bloom flowers with a wave of their hand. I want the participant to feel enchanted and powerful, and I hope that the experience will be delightful enough for them to want to try it again.`
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -110,7 +110,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[Write here]`
+`I am designing this project as if I were a small creative studio making an interactive experience for exhibition visitors of all ages.`
 
 ---
 
