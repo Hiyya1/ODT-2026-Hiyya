@@ -58,11 +58,11 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `Hiyya` | `Electronics / Coding / App / Fabrication / Mechanics` | `NA` | `Knowledge of basic circuitry and coding, aesthetic sensibilities` |
+| `Hiyya` | `Electronics / Coding / Fabrication / Mechanics` | `NA` | `Knowledge of basic circuitry and coding, aesthetic sensibilities` |
 
 
 ## 1.3 Project Title
-`Wave to Bloom`
+`Ethereal Flowers`
 
 ## 1.4 One-Line Pitch
 `A panel of blooming flowers which respond to the movement of your hand over them.`
@@ -75,7 +75,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project involves an interactive panel consisting of about 20 mechanised flowers. As the user moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the user`
+`This project involves an interactive panel consisting of about 20 mechanised flowers. As the user moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the user, with a touch of whimsical magic and fairylike charm.
+The technologies involved in this project are ultrasonic sensors, servo motors, and LED lights, all controlled by a MicroPython code through an ESP32.`
 
 ---
 
