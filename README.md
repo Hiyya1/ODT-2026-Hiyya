@@ -58,14 +58,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Hiyya` | `Electronics / Coding / App / Fabrication / Mechanics` | `NA` | `Knowledge of basic circuitry and coding, aesthetic sensibilities` |
+
 
 ## 1.3 Project Title
-`[Enter the title of your project]`
+`Wave to Bloom`
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+`A panel of blooming flowers which respond to the movement of your hand over them.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,7 +75,7 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`[Write here]`
+`This project involves an interactive panel consisting of about 20 mechanised flowers. As the user moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the user`
 
 ---
 
