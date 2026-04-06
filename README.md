@@ -155,27 +155,24 @@ Examples:
 | Age range | `All ages` |
 | Solo or multiplayer | `Solo, can also be experienced in a group` |
 | Expected duration of one round | `About 2 minutes but ideally as long as the participant wishes to engage with it` |
-| What should the player feel? | `Joy, whimsical delight, ` |
+| What should the player feel? | `Joy, whimsical delight` |
 | Is explanation required before use? | `Very minimal, just a prompt for them to move their hand over the panel` |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[How does the player first encounter it?]`
-2. **Start:** `[How do they begin?]`
-3. **First Action:** `[What do they do first?]`
-4. **Main Interaction:** `[What keeps happening during use?]`
-5. **System Response:** `[How does the project respond?]`
-6. **Win / Lose / End Condition:** `[How does one round end?]`
-7. **Reset:** `[How does the next round begin?]`
+1. **Approach:** `The participant sees the flower panel and approaches it.`
+2. **Start:** `They read the instruction to move their hand over the panel.`
+3. **First Action:** `They move their hand over the flowers.`
+4. **Main Interaction:** `The player moves their hand across the panel, in whatever patterns they wish to create.`
+5. **System Response:** `The flowers bloom as the hand moves over them, following the pattern desired by the player.`
+6. **Win / Lose / End Condition:** `When the player has finished enjoying the experience. (Or could also have a timer for fixed duration.)`
+7. **Reset:** `The next round begins when another participant comes over and moves their hand over the panel.`
 
 ## 4.4 Rules of Play
 If your project is a game, list the rules clearly.
 
-- `[Rule 1]`
-- `[Rule 2]`
-- `[Rule 3]`
-- `[Rule 4]`
+`NA`
 
 ---
 
@@ -184,24 +181,24 @@ If your project is a game, list the rules clearly.
 ## 5.1 Definition of “Playable”
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `[Condition 1]`
-- [ ] `[Condition 2]`
-- [ ] `[Condition 3]`
-- [ ] `[Condition 4]`
-- [ ] `[Condition 5]`
+- [ ] `Mechanised flowers open and close using servo motors.`
+- [ ] `Ultrasonic sensors detect hand movement to some accuracy.`
+- [ ] `Flowers open up according to position of hand.`
+- [ ] `Flowers light up when they bloom.`
+- [ ] `Flower close back after a certain duration.`
 
 ## 5.2 Minimum Viable Version
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`[Write here]`
+`A single flower that blooms when it detects hand movement above it and closes back after a fixed duration.`
 
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `[Stretch feature 1]`
-- `[Stretch feature 2]`
-- `[Stretch feature 3]`
+- `Multiple flowers (15-25) arranged in arrays`
+- `Flowers light up when they bloom`
+- `Flowers made of material(s) that are delicate and aesthetically pleasing.`
 
 ---
 
