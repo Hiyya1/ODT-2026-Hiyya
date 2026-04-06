@@ -151,12 +151,12 @@ Examples:
 
 | Question | Response |
 |---|---|
-| Who is this for? | `[Write here]` |
-| Age range | `[Write here]` |
-| Solo or multiplayer | `[Write here]` |
-| Expected duration of one round | `[Write here]` |
-| What should the player feel? | `[Write here]` |
-| Is explanation required before use? | `[Write here]` |
+| Who is this for? | `Exhibition visitors or someone looking for a delightful visual experience` |
+| Age range | `All ages` |
+| Solo or multiplayer | `Solo, can also be experienced in a group` |
+| Expected duration of one round | `About 2 minutes but ideally as long as the participant wishes to engage with it` |
+| What should the player feel? | `Joy, whimsical delight, ` |
+| Is explanation required before use? | `Very minimal, just a prompt for them to move their hand over the panel` |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
