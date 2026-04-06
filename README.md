@@ -208,16 +208,16 @@ What features are nice to have but not essential?
 Check all that apply.
 
 - [x] Electronics-based
-- [ ] Mechanical
-- [ ] Sensor-based
+- [x] Mechanical
+- [x] Sensor-based
 - [ ] App-connected
-- [ ] Motorized
+- [x] Motorized
 - [ ] Sound-based
-- [ ] Light-based
+- [x] Light-based
 - [ ] Screen/UI-based
-- [ ] Fabricated structure
+- [x] Fabricated structure
 - [ ] Game logic based
-- [ ] Installation / tabletop experience
+- [x] Installation / tabletop experience
 - [ ] Other: `[Write here]`
 
 ## 6.2 High-Level System Description
@@ -231,16 +231,21 @@ Include:
 - app interaction if any.
 
 **Response:**  
-`[Write here]`
+- `Input: Ultrasonic sensors placed at different points on the panel detect hand movement.`
+- `Processing: The sensors correspond to specific flowers based on proximity. When a sensor detects hand movement, the code sends instructions to rotate its corresponding servo motor and turn on the corresponding light of the flower. `
+- `Output: The flower(s) underneath the hand open and light up.`
+- `Physical structure: ??????????`
+- `App interaction: NA`
 
 ## 6.3 Input / Output Map
 
 | System Part | Type | What It Does |
 |---|---|---|
-| `[Button / Sensor / Switch / App Input]` | Input | `[Describe]` |
-| `[ESP32 / Controller]` | Processing | `[Describe]` |
-| `[LED / Motor / Servo / Buzzer / Display]` | Output | `[Describe]` |
-| `[Mechanical Assembly]` | Physical Action | `[Describe]` |
+| `Ultrasonic Sensor` | Input | `Detects hand motion above the panel and sends corresponding signals to the ESP32` |
+| `ESP32` | Processing | `Takes data from the sensor and instructs the servos and LEDs accordingly` |
+| `Servo` | Output | `Opens up the petals of the flower` |
+| `LED` | Output | `Lights up the flower as it blooms` |
+| `Mechanical Assembly` | Physical Action | `Translates the rotational motion of the servo to a motion that opens & closes the petals of the flowers` |
 
 ---
 
