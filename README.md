@@ -292,13 +292,13 @@ Check all that apply.
 - [ ] Gears
 - [ ] Pulleys
 - [ ] Belt drives
-- [ ] Linkages
+- [x] Linkages
 - [ ] Hinges
-- [ ] Shafts
+- [x] Shafts
 - [ ] Springs
 - [ ] Bearings
 - [ ] Wheels
-- [ ] Sliders
+- [x] Sliders
 - [ ] Levers
 - [ ] Not applicable
 
