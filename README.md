@@ -145,7 +145,7 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[Write here]`
+`connect and run code → move hand over panel → ultrasonic sensor detects → respective servo motor rotates → flower just under hand opens and lights up`
 
 ## 4.2 Intended Player / Audience
 
