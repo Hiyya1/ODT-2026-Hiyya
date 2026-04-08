@@ -75,8 +75,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project involves an interactive panel consisting of about 20 mechanised flowers. As the participant moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming and lighting up. This will hopefully create a unique visual and sensory experience for the participant, with a touch of whimsical magic and fairylike charm.
-The technologies involved in this project are ultrasonic sensors, servo motors, and LED lights, all controlled by a MicroPython code through an ESP32.`
+`This project involves an interactive panel consisting of about 20 mechanised flowers. As the participant moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming open. This will hopefully create a unique visual and sensory experience for the participant, with a touch of whimsical magic and fairylike charm.
+The technologies involved in this project are ultrasonic sensors and servo motor mechanisms, controlled by a MicroPython code through an ESP32.`
 
 ---
 
@@ -151,7 +151,7 @@ Examples:
 
 | Question | Response |
 |---|---|
-| Who is this for? | `Exhibition visitors or someone looking for a delightful visual experience` |
+| Who is this for? | `Exhibition visitors or someone looking for a fun visual experience` |
 | Age range | `All ages` |
 | Solo or multiplayer | `Solo, can also be experienced in a group` |
 | Expected duration of one round | `About 2 minutes but ideally as long as the participant wishes to engage with it` |
@@ -184,7 +184,6 @@ Your project will be considered complete only if these conditions are met.
 - [ ] `Mechanised flowers open and close using servo motors.`
 - [ ] `Ultrasonic sensors detect hand movement to some accuracy.`
 - [ ] `Flowers open up according to position of hand.`
-- [ ] `Flowers light up when they bloom.`
 - [ ] `Flower close back after a certain duration.`
 
 ## 5.2 Minimum Viable Version
@@ -196,9 +195,9 @@ What is the smallest version of this project that still delivers the core experi
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `Multiple flowers (15-25) arranged in arrays`
-- `Flowers light up when they bloom`
-- `Flowers made of material(s) that are delicate and aesthetically pleasing.`
+- `Multiple flowers arranged in arrays`
+- `Flowers with multiple layers of petals`
+- `Flowers made of material(s) that are delicate and aesthetically pleasing`
 
 ---
 
@@ -232,9 +231,9 @@ Include:
 
 **Response:**  
 - `Input: Ultrasonic sensors placed at different points on the panel detect hand movement.`
-- `Processing: The sensors correspond to specific flowers based on proximity. When a sensor detects hand movement, the code sends instructions to rotate its corresponding servo motor and turn on the corresponding light of the flower. `
+- `Processing: The sensors correspond to specific flowers based on proximity. When a sensor detects hand movement, the ESP32 sends instructions to the servo motor to rotate by a certain angle and open the flower. `
 - `Output: The flower(s) underneath the hand open and light up.`
-- `Physical structure: ??????????`
+- `Physical structure: The flower uses an umbrella mechanism to open and close. A lever connects the servo to the flower handle that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic materials.`
 - `App interaction: NA`
 
 ## 6.3 Input / Output Map
@@ -245,7 +244,7 @@ Include:
 | `ESP32` | Processing | `Takes data from the sensor and instructs the servos and LEDs accordingly` |
 | `Servo` | Output | `Opens up the petals of the flower` |
 | `LED` | Output | `Lights up the flower as it blooms` |
-| `Mechanical Assembly` | Physical Action | `Translates the rotational motion of the servo to a motion that opens & closes the petals of the flowers` |
+| `Mechanical Assembly` | Physical Action | `Translates the rotational motion of the servo to a vertical motion that opens & closes the petals of the flowers` |
 
 ---
 
@@ -299,14 +298,14 @@ Check all that apply.
 - [ ] Bearings
 - [ ] Wheels
 - [x] Sliders
-- [ ] Levers
+- [x] Levers
 - [ ] Not applicable
 
 ## 8.2 Mechanical Description
 Describe the mechanism and what it is meant to do.
 
 **Response:**  
-`[Write here]`
+`The flower uses an umbrella mechanism to open and close. A slider on the flower stem is pulled up and down to open and close the flower, respectively. A lever connects the servo to the stem slider that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic craft materials.`
 
 ## 8.3 Motion Planning
 If something moves, explain:
@@ -317,7 +316,11 @@ If something moves, explain:
 - what could go wrong.
 
 **Response:**  
-`[Write here]`
+- `The petals of the flower move, creating an illusion of the flower blooming.`
+- `Vertical movement of the slider causes the movement, using an umbrella mechanism.`
+- `The vertical distance for full movement is about 5 cm.`
+- `Speed can be controlled/changed through the servo.`
+- `Umbrella mechanism doesn't work as planned, or servo rotation does not accurately convert to vertical motion.`
 
 ## 8.4 Simulation / CAD / Animation Before Making
 If your project includes mechanical motion, document the digital planning before fabrication.
@@ -331,7 +334,7 @@ If your project includes mechanical motion, document the digital planning before
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
-`[Write here]`
+`NA as mechanisms were made by hand and tested accordingly.`
 
 ---
 
@@ -341,15 +344,24 @@ What changed after the CAD, animation, or simulation stage?
 
 | Component | Quantity | Purpose |
 |---|---:|---|
-| `[ESP32]` | `1` | `[Main controller]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
+| `ESP32` | `1` | `Main controller` |
+| `Power adapter` | `1` | `External power source` |
+| `LM2596 Buck regulator` | `1` | `Provide adequate current for multiple devices` |
+| `PCA9685` | `1` | `Connect multiple (16) servos to 2 pins` |
+| `Ultrasonic sensors` | `16` | `Detect hand movement above panel` |
+| `Servo motors` | `16` | `Open and close flowers` |
+| `Breadboard` | `1` | `For electrical connections` |
+| `Male and female jumper wires` | `50 (approx.)` | `To connect electrical components` |
 
 ## 9.2 Wiring Plan
 Describe the main electrical connections.
 
 **Response:**  
-`[Write here]`
+- `LM2596 connected to wall socket via adapter.`
+- `ESP32 connected to LM2596.`
+- `16 servos connected to ESP32 through PCA.`
+- `16 ultrasonic sensors connected to ESP32.`
+- resistors, other things???????????
 
 ## 9.3 Circuit Diagram
 Insert a hand-drawn or software-made circuit diagram.
@@ -361,7 +373,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Question | Response |
 |---|---|
-| Power source | `[USB / battery / adapter / other]` |
+| Power source | `Adapter` |
 | Voltage required | `[Write here]` |
 | Current concerns | `[Write here]` |
 | Safety concerns | `[Write here]` |
@@ -374,8 +386,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform | Purpose |
 |---|---|
-| `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
-| `[Tool]` | `[Purpose]` |
+| `MicroPython` | `Coding` |
 
 ## 10.2 Software Logic
 Describe what the code must do.
@@ -420,7 +431,7 @@ Suggested sequence:
 
 ## 11.1 Is an app part of this project?
 - [ ] Yes
-- [ ] No
+- [x] No
 
 If yes, complete this section.
 
@@ -522,7 +533,7 @@ Include:
 - how documentation will be maintained.
 
 **Response:**  
-`[Write here]`
+`NA (individual project)`
 
 ## 13.2 Task Breakdown
 
@@ -541,13 +552,12 @@ Include:
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| Concept and gameplay | `[Name]` | `[Name]` |
-| Electronics | `[Name]` | `[Name]` |
-| Coding | `[Name]` | `[Name]` |
-| App | `[Name]` | `[Name]` |
-| Mechanical build | `[Name]` | `[Name]` |
-| Testing | `[Name]` | `[Name]` |
-| Documentation | `[Name]` | `[Name]` |
+| Concept and gameplay | `Hiyya` | `NA` |
+| Electronics | `Hiyya` | `NA` |
+| Coding | `Hiyya` | `NA` |
+| Mechanical build | `Hiyya` | `NA` |
+| Testing | `Hiyya` | `NA` |
+| Documentation | `Hiyya` | `NA` |
 
 ---
 
@@ -593,10 +603,10 @@ Expected outcomes:
 
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 1 | `Finalise idea` | `Discussed multiple ideas` | `Can take flower idea forward, but with more interactive features` | `Ideate further` |
+| Week 2 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
+| Week 3 | `Finish build and start working on code and circuits` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 4 | `Complete project` | `[Write here]` | `[Write here]` | `[Write here]` |
 
 ---
 
