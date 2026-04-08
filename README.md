@@ -478,9 +478,19 @@ Insert a sketch or screenshot of the app interface.
 
 | Item | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
 |---|---:|---|---|---:|---|---|
-| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
+| `ESP32` | `1` | `Yes` | `Yes` | `500` | `--` | `--` |
+| `Adapter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
+| `Breadboard (joined)` | `1` | `Yes` | `No` | `0` | `--` | `--` |
+| `Jumper wires (male and female)` | `50` | `Yes` | `No` | `0` | `--` | `--` |
+| `Wire cutter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
+| `LM2596 Buck Regulator` | `1` | `No` | `Yes` | `150` | `--` | `To supply sufficient power to multiple components` |
+| `PCA9685` | `1` | `No` | `No` | `0` | `--` | `To connect multiple servos to 2 ESP pins` |
+| `Ultrasonic sensor` | `16` | `Yes` | `No` | `0` | `--` | `To detect user's hand` |
+| `Servo motor` | `16` | `Yes` | `Yes` | `1000` | `--` | `For accurate motion` |
+| `Chart paper` | `2` | `No` | `No` | `0` | `--` | `For flexible build construction` |
+| `Fabric` | `10 m` | `No` | `Yes` | `750` | `Polyester wrapping paper` | Translucent fabric for visual apppeal |
+| `Craft wire` | `1 pack (~50)` | `No` | `No` | `0` | `Aluminium, 24 gauge` | `To give shape/structure to the flower` |
+| `MDF board` | `2 sq.m` | `No` | `No` | `0` | `3 mm` | `Sturdy enough for the multi-layered base of installation` |
 
 ## 12.2 Material Justification
 Explain why you selected your main materials and components.
