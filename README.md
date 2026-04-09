@@ -62,7 +62,7 @@ By the final review, this README should clearly show:
 
 
 ## 1.3 Project Title
-`Ethereal Flowers`
+`Blooming Flowers`
 
 ## 1.4 One-Line Pitch
 `A panel of blooming flowers which responds to the movement of your hand over it.`
