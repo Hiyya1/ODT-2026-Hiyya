@@ -431,7 +431,21 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-[Write your pseudocode here]
+initialise
+import libraries
+assign ESP32 pins to ultrasonic sensors
+assign PCA pins to servos
+
+start loop
+trigger all sensors
+check duration till pulse received for each sensor separately
+for each sensor, if no object detected, go back to loop
+if object detected by sensor X:
+  rotate corresponding servo X slowly by 180 degrees
+  wait for 2 seconds
+  rotate in reverse by 180 degrees
+  go back to loop
+
 ```
 
 ---
