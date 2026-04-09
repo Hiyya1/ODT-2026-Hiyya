@@ -322,7 +322,7 @@ If something moves, explain:
 - `Speed can be controlled/changed through the servo.`
 - `Umbrella mechanism doesn't work as planned, or servo rotation does not accurately convert to vertical motion.`
 
-## 8.4 Simulation / CAD / Animation Before Making
+## 8.4 Simulation / CAD / Animation Before Making - NA
 If your project includes mechanical motion, document the digital planning before fabrication.
 
 | Tool Used | File / Link | What Was Tested |
