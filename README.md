@@ -254,7 +254,7 @@ Include:
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/Concept sketch 1.jpeg" width="300"> <img src="images/Concept sketch 2.jpeg" width="500">
 
 Example:
 ```md
@@ -270,7 +270,9 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<p align="center">
+  <img src="images/Labelled build sketch.jpeg" width="400">
+</p>
 
 ## 7.3 Approximate Dimensions
 
@@ -424,7 +426,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/Code Flowchart.jpg" width="700">
 
 ## 10.4 Pseudocode
 
