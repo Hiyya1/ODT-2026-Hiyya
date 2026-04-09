@@ -396,12 +396,19 @@ Include:
 - input handling,
 - sensor reading,
 - decision logic,
-- output behavior,
+- output behaviour,
 - communication logic,
 - reset behavior.
 
 **Response:**  
-`[Write here]`
+- `When code runs, all sensors get triggered.`
+- `Each sensor corresponds to a flower with a servo.`
+- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 180 degrees.`
+- `The servo rotates with time delays for the flower to open up slowly.`
+- `The servo waits for 2-3 seconds, then slowly rotates back to its original position.`
+- `During this time, the servo does not react to sensor input to avoid clashing signals and malfunction.`
+- `However, during this time, other servos can be activated by their respective sensors.`
+- `Once the servo is back to its original position, it can again be activated by the sensor, and the loop repeats until the code is running.`
 
 ## 10.3 Code Flowchart
 Insert a flowchart showing your code logic.
