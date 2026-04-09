@@ -58,7 +58,7 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `Hiyya` | `Electronics / Coding / Fabrication / Mechanics` | `NA` | `Knowledge of basic circuitry and coding, aesthetic sensibilities` |
+| `Hiyya` | `Electronics / Coding / Fabrication / Mechanics` | `NA` | `Knowledge of basic build mechanisms, circuitry, and coding; aesthetic sensibilities` |
 
 
 ## 1.3 Project Title
