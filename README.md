@@ -483,12 +483,12 @@ Insert a sketch or screenshot of the app interface.
 | `Breadboard (joined)` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `Jumper wires (male and female)` | `50` | `Yes` | `No` | `0` | `--` | `--` |
 | `Wire cutter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
-| `LM2596 Buck Regulator` | `1` | `No` | `Yes` | `150` | `--` | `To supply sufficient power to multiple components` |
+| `LM2596 Buck Regulator` | `1` | `No` | `Yes` | `100` | `--` | `To supply sufficient power to multiple components` |
 | `PCA9685` | `1` | `No` | `No` | `0` | `--` | `To connect multiple servos to 2 ESP pins` |
 | `Ultrasonic sensor` | `16` | `Yes` | `No` | `0` | `--` | `To detect user's hand` |
-| `Servo motor` | `16` | `Yes` | `Yes` | `1000` | `--` | `For accurate motion` |
+| `Servo motor` | `16` | `Yes` | `Yes (10)` | `1000` | `--` | `For accurate motion` |
 | `Chart paper` | `2` | `No` | `No` | `0` | `--` | `For flexible build construction` |
-| `Fabric` | `10 m` | `No` | `Yes` | `750` | `Polyester wrapping paper` | Translucent fabric for visual apppeal |
+| `Fabric` | `12 m` | `No` | `Yes` | `600` | `Polyester wrapping paper` | Translucent fabric for visual apppeal |
 | `Craft wire` | `1 pack (~50)` | `No` | `No` | `0` | `Aluminium, 24 gauge` | `To give shape/structure to the flower` |
 | `MDF board` | `2 sq.m` | `No` | `No` | `0` | `3 mm` | `Sturdy enough for the multi-layered base of installation` |
 
@@ -502,31 +502,36 @@ Examples:
 - Why bearing instead of a plain shaft hole?
 
 **Response:**  
-`[Write here]`
+- `Servo over DC/stepper motor: Small size and easy connections with accurate rotation angles`
+- `Paper & wire mechanism over 3D print: More scope for modification & correcting errors, less time spent on modelling and 3D printing`
+- `MDF over sunboard/cardboard: More sturdiness/stability, easier to drill holes and cut accurate pieces`
+- `Fabric over 3D-printed petals: Gives a delicate feel and aesthetic charm to the flowers`
 
 ## 12.3 Items to Purchase Separately
 
 | Item | Why Needed | Purchase Link | Latest Safe Date to Procure | Status |
 |---|---|---|---|---|
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
+| `ESP32` | `For processing code` | `https://amzn.in/d/0a81HenG` | `15/04/2026` | `Received` |
+| `LM2596 Buck Regulator` | `For providing adequate power` | `https://amzn.in/d/05CM7O02` | `18/04/2026` | `Received` |
+| `Servo motor` | `For opening-closing mechanism` | `https://amzn.in/d/09Z82pvn` | `15/04/2026` | `Received` |
+| `Fabric` | `For petals` | `https://amzn.in/d/0gyDqJPB` | `13/04/2026` | `Received` |
 
 ## 12.4 Budget Summary
 
 | Budget Item | Estimated Cost |
 |---|---:|
-| Electronics | `[Cost]` |
-| Mechanical parts | `[Cost]` |
-| Fabrication materials | `[Cost]` |
-| Purchased extras | `[Cost]` |
-| Contingency | `[Cost]` |
-| **Total** | `[Cost]` |
+| Electronics | `1600` |
+| Mechanical parts | `--` |
+| Fabrication materials | `600` |
+| Purchased extras | `--` |
+| Contingency | `--` |
+| **Total** | `2200` |
 
 ## 12.5 Budget Reflection
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`[Write here]`
+`I've tried to make this as cost-efficient as possible, I don't think anything else can be simplified for the required build.`
 
 ---
 
@@ -549,14 +554,14 @@ Include:
 
 | Task ID | Task | Owner | Estimated Hours | Deadline | Dependency | Status |
 |---|---|---|---:|---|---|---|
-| T1 | `[Finalize concept]` | `[Name]` | `2` | `[Date]` | `None` | `To Do` |
-| T2 | `[Complete BOM]` | `[Name]` | `1` | `[Date]` | `T1` | `To Do` |
-| T3 | `[Test electronics]` | `[Name]` | `2` | `[Date]` | `T1` | `To Do` |
-| T4 | `[Build structure]` | `[Name]` | `4` | `[Date]` | `T1` | `To Do` |
-| T5 | `[Write control code]` | `[Name]` | `4` | `[Date]` | `T3` | `To Do` |
-| T6 | `[Integrate system]` | `[Name]` | `4` | `[Date]` | `T4, T5` | `To Do` |
-| T7 | `[Playtest]` | `[Name]` | `2` | `[Date]` | `T6` | `To Do` |
-| T8 | `[Refine and document]` | `[Name]` | `3` | `[Date]` | `T7` | `To Do` |
+| T1 | `[Finalize concept]` | `Hiyya` | `2` | `01/04/2026` | `None` | `Completed` |
+| T2 | `[Complete BOM]` | `Hiyya` | `1` | `07/04/2026` | `T1` | `Completed` |
+| T3 | `[Test electronics]` | `Hiyya` | `2` | `15/04/2026` | `T1` | `To Do` |
+| T4 | `[Build structure]` | `Hiyya` | `18` | `16/04/2026` | `T1` | `In progress` |
+| T5 | `[Write control code]` | `Hiyya` | `4` | `15/04/2026` | `T3` | `To Do` |
+| T6 | `[Integrate system]` | `Hiyya` | `4` | `18/04/2026` | `T4, T5` | `To Do` |
+| T7 | `[Playtest]` | `Hiyya` | `2` | `19/04/2026` | `T6` | `To Do` |
+| T8 | `[Refine and document]` | `Hiyya` | `4` | `20/04/2026` | `T7` | `In progress` |
 
 ## 13.3 Responsibility Split
 
@@ -577,21 +582,21 @@ Include:
 
 ### Week 1 — Plan and De-risk
 Expected outcomes:
-- [ ] Idea finalized
-- [ ] Core interaction decided
-- [ ] Sketches made
-- [ ] BOM completed
-- [ ] Purchase needs identified
-- [ ] Key uncertainty identified
-- [ ] Basic feasibility tested
+- [x] Idea finalized
+- [x] Core interaction decided
+- [x] Sketches made
+- [x] BOM completed
+- [x] Purchase needs identified
+- [x] Key uncertainty identified
+- [x] Basic feasibility tested
 
 ### Week 2 — Build Subsystems
 Expected outcomes:
-- [ ] Electronics tests completed
-- [ ] CAD / structure planning completed
+- [x] Electronics tests completed
+- [x] CAD / structure planning completed
 - [ ] App UI started if needed
-- [ ] Mechanical concept tested
-- [ ] Main subsystems partially working
+- [x] Mechanical concept tested
+- [x] Main subsystems partially working
 
 ### Week 3 — Integrate
 Expected outcomes:
@@ -613,10 +618,10 @@ Expected outcomes:
 
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
-| Week 1 | `Finalise idea` | `Discussed multiple ideas` | `Can take flower idea forward, but with more interactive features` | `Ideate further` |
-| Week 2 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
+| Week 1 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
+| Week 2 | `Prototype the basic mechanism` | `Made a working prototype of flower` | `Need to add wire reinforcements` | `Make all the flowers` |
 | Week 3 | `Finish build and start working on code and circuits` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `Complete project` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 4 | `Complete project and documentation` | `[Write here]` | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -626,16 +631,16 @@ Expected outcomes:
 
 | Risk | Type | Likelihood | Impact | Mitigation Plan | Owner |
 |---|---|---|---|---|---|
-| `[Example: Bluetooth disconnects]` | `Technical` | `Medium` | `High` | `[Fallback interaction / simplify connection flow]` | `[Name]` |
-| `[Example: Structure breaks during play]` | `Mechanical` | `Medium` | `High` | `[Reinforce joints / change material]` | `[Name]` |
-| `[Risk]` | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
-| `[Risk]` | `[Type]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
+| `Ultrasonic sensors don't detect motion as planned` | `Technical` | `Medium` | `High` | `Change position of sensors / use hard object to reflect sound better` | `Hiyya` |
+| `Structure breaks during play` | `Mechanical` | `Medium` | `High` | `[Reinforce joints / change material]` | `Hiyya` |
+| `Building and integration takes too much time` | `Time` | `High` | `High` | `Reduce number of flowers / start with enough time at hand` | `Hiyya` |
+| `Servo motors don't open flower as planned` | `Mechanical` | `Low` | `High` | `Change material/orientation of pull tabs` | `Hiyya` |
 
 ## 15.2 Biggest Unknown Right Now
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-`[Write here]`
+`Integration of physical build with code and circuits, making the flowers move without assistance.`
 
 ---
 
@@ -645,20 +650,19 @@ What is the single biggest uncertainty in your project at this stage?
 
 | What Needs Testing | How You Will Test It | Success Condition |
 |---|---|---|
-| `[Bluetooth connection]` | `[Method]` | `[What counts as success?]` |
-| `[Mechanism movement]` | `[Method]` | `[What counts as success?]` |
-| `[Sensor behavior]` | `[Method]` | `[What counts as success?]` |
-| `[App communication]` | `[Method]` | `[What counts as success?]` |
+| `Servo motors` | `Test each motor individually` | `Servo rotates correctly as per code` |
+| `[Mechanism movement]` | `Make 1 flower with servo connection and check if it works` | `Flower visibly opens and closes` |
+| `[Sensor behavior]` | `Test each sensor individually` | `Sensor detects movement of hand ~20cm away from it` |
 
 ## 16.2 Playtesting Plan
 
 | Question | How You Will Check |
 |---|---|
-| Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
-| Is the response clear and immediate? | `[Method]` |
+| Do players understand what to do? | `Players just have to move their hand over the panel, no testing required.` |
+| Is the interaction satisfying? | `Will see their reaction as they interact with the installation.` |
+| Do players want another turn? | `Players can interact with it ideally as long as they wish.` |
+| Is the challenge balanced? | `The installation is more of an experience than a challenge. Will ask users if they enjoyed the experience.` |
+| Is the response clear and immediate? | `Will find out from observing users interact with it.` |
 
 ## 16.3 Testing and Debugging Log
 
@@ -691,7 +695,16 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+- `First prototype of flower mechanism made using paper.`
+- `Built 16 flowers using the same mechanism, with wire reinforcements to support the fabric petals.`
+- `Tested flower movement with servo motor and code.`
+- `Made an small MDF base for each flower as a separate module, with holes drilled into it for wires to pass through.`
+- `Attached flower, servo, and sensor to each MDF panel.`
+- `Made a larger MDF base to put together the flowers.`
+- `Secured wire connections from each module to the breadboard attached to the large base`
+- `Tested code with the build.`
+- `Playtesting with users.`
+- `Made small revisions and cleaned up the build.`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
