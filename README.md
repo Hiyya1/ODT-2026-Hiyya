@@ -212,7 +212,7 @@ Check all that apply.
 - [ ] App-connected
 - [x] Motorized
 - [ ] Sound-based
-- [x] Light-based
+- [ ] Light-based
 - [ ] Screen/UI-based
 - [x] Fabricated structure
 - [ ] Game logic based
@@ -243,7 +243,6 @@ Include:
 | `Ultrasonic Sensor` | Input | `Detects hand motion above the panel and sends corresponding signals to the ESP32` |
 | `ESP32` | Processing | `Takes data from the sensor and instructs the servos and LEDs accordingly` |
 | `Servo` | Output | `Opens up the petals of the flower` |
-| `LED` | Output | `Lights up the flower as it blooms` |
 | `Mechanical Assembly` | Physical Action | `Translates the rotational motion of the servo to a vertical motion that opens & closes the petals of the flowers` |
 
 ---
