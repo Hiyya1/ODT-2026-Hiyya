@@ -130,7 +130,7 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`[Write here]`
+`Using ultrasonic sensors to create a magical experience of opening and closing flowers without touching them.`
 
 ---
 
@@ -234,7 +234,7 @@ Include:
 - `Input: Ultrasonic sensors placed at different points on the panel detect hand movement.`
 - `Processing: The sensors correspond to specific flowers based on proximity. When a sensor detects hand movement, the ESP32 sends instructions to the servo motor to rotate by a certain angle and open the flower. `
 - `Output: The flower(s) underneath the hand open and light up.`
-- `Physical structure: The flower uses an umbrella mechanism to open and close. A lever connects the servo to the flower handle that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic materials.`
+- `Physical structure: The flower uses an umbrella mechanism to open and close. A lever connects the servo to the flower slider that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic materials.`
 - `App interaction: NA`
 
 ## 6.3 Input / Output Map
@@ -273,15 +273,16 @@ Add a sketch with labels showing:
 <p align="center">
   <img src="images/Labelled build sketch.jpeg" width="400">
 </p>
+`Note: The triple-layered structure was later simplified to two layers for ease of construction, so the layers labelled 1 and 2 were reduced to a single layer in the final project.`
 
 ## 7.3 Approximate Dimensions
 
 | Dimension | Value |
 |---|---|
-| Length | `[Write here]` |
-| Width | `[Write here]` |
-| Height | `[Write here]` |
-| Estimated weight | `[Write here]` |
+| Length | `1m` |
+| Width | `0.75m` |
+| Height | `0.25m` |
+| Estimated weight | `7 kg` |
 
 ---
 
@@ -349,11 +350,11 @@ What changed after the CAD, animation, or simulation stage?
 | `ESP32` | `1` | `Main controller` |
 | `Power adapter` | `1` | `External power source` |
 | `LM2596 Buck regulator` | `1` | `Provide adequate current for multiple devices` |
-| `PCA9685` | `1` | `Connect multiple (16) servos to 2 pins` |
-| `Ultrasonic sensors` | `16` | `Detect hand movement above panel` |
-| `Servo motors` | `16` | `Open and close flowers` |
+| `PCA9685` | `1` | `Connect multiple servos to 2 pins` |
+| `Ultrasonic sensors` | `12` | `Detect hand movement above panel` |
+| `Servo motors` | `12` | `Open and close flowers` |
 | `Breadboard` | `1` | `For electrical connections` |
-| `Male and female jumper wires` | `50 (approx.)` | `To connect electrical components` |
+| `Male and female jumper wires` | `100 (approx.)` | `To connect electrical components` |
 
 ## 9.2 Wiring Plan
 Describe the main electrical connections.
@@ -361,8 +362,8 @@ Describe the main electrical connections.
 **Response:**  
 - `LM2596 connected to wall socket via adapter.`
 - `ESP32 connected to LM2596.`
-- `16 servos connected to ESP32 through PCA.`
-- `16 ultrasonic sensors connected to ESP32.`
+- `12 servos connected to ESP32 through PCA.`
+- `12 ultrasonic sensors connected to ESP32.`
 - resistors, other things???????????
 
 ## 9.3 Circuit Diagram
@@ -504,15 +505,15 @@ Insert a sketch or screenshot of the app interface.
 | `ESP32` | `1` | `Yes` | `Yes` | `500` | `--` | `--` |
 | `Adapter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `Breadboard (joined)` | `1` | `Yes` | `No` | `0` | `--` | `--` |
-| `Jumper wires (male and female)` | `50` | `Yes` | `No` | `0` | `--` | `--` |
+| `Jumper wires (male and female)` | `100` | `Yes` | `No` | `0` | `--` | `--` |
 | `Wire cutter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `LM2596 Buck Regulator` | `1` | `No` | `Yes` | `100` | `--` | `To supply sufficient power to multiple components` |
 | `PCA9685` | `1` | `No` | `No` | `0` | `--` | `To connect multiple servos to 2 ESP pins` |
-| `Ultrasonic sensor` | `16` | `Yes` | `No` | `0` | `--` | `To detect user's hand` |
-| `Servo motor` | `16` | `Yes` | `Yes (10)` | `1000` | `--` | `For accurate motion` |
+| `Ultrasonic sensor` | `12` | `Yes` | `No` | `0` | `--` | `To detect user's hand` |
+| `Servo motor` | `12` | `Yes` | `Yes (10)` | `1000` | `--` | `For accurate motion` |
 | `Chart paper` | `2` | `No` | `No` | `0` | `--` | `For flexible build construction` |
 | `Fabric` | `12 m` | `No` | `Yes` | `600` | `Polyester wrapping paper` | Translucent fabric for visual apppeal |
-| `Craft wire` | `1 pack (~50)` | `No` | `No` | `0` | `Aluminium, 24 gauge` | `To give shape/structure to the flower` |
+| `Craft wire` | `1 pack (~10)` | `No` | `No` | `0` | `Aluminium, 24 gauge` | `To make the tabs/levers to connect servos to flower sliders` |
 | `MDF board` | `2 sq.m` | `No` | `No` | `0` | `3 mm` | `Sturdy enough for the multi-layered base of installation` |
 
 ## 12.2 Material Justification
@@ -554,7 +555,7 @@ Examples:
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`I've tried to make this as cost-efficient as possible, I don't think anything else can be simplified for the required build.`
+`I've tried to make it as cost-efficient as possible, I don't think anything else can be simplified for the required build.`
 
 ---
 
@@ -623,11 +624,11 @@ Expected outcomes:
 
 ### Week 3 — Integrate
 Expected outcomes:
-- [ ] Physical body built
-- [ ] Electronics integrated
-- [ ] Code connected to hardware
+- [x] Physical body built
+- [x] Electronics integrated
+- [x] Code connected to hardware
 - [ ] App connected if required
-- [ ] First playable version exists
+- [x] First playable version exists
 
 ### Week 4 — Refine and Finish
 Expected outcomes:
@@ -642,9 +643,9 @@ Expected outcomes:
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
 | Week 1 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
-| Week 2 | `Prototype the basic mechanism` | `Made a working prototype of flower` | `Need to add wire reinforcements` | `Make all the flowers` |
+| Week 2 | `Prototype the basic mechanism` | `Made a working prototype of flower` | `Need to add reinforcements to provide strength` | `Make all the flowers` |
 | Week 3 | `Finish build and start working on code and circuits` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `Complete project and documentation` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 4 | `Integrate electronics and finish documentation` | `[Write here]` | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -663,7 +664,7 @@ Expected outcomes:
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-`Integration of physical build with code and circuits, making the flowers move without assistance.`
+`Integration of physical build with code and electronics, making the flowers move without assistance.`
 
 ---
 
@@ -719,11 +720,11 @@ Include:
 
 **Response:**  
 - `First prototype of flower mechanism made using paper.`
-- `Built 16 flowers using the same mechanism, with wire reinforcements to support the fabric petals.`
+- `Built 12 flowers using the same mechanism, with reinforcements to support the fabric petals.`
 - `Tested flower movement with servo motor and code.`
-- `Made an small MDF base for each flower as a separate module, with holes drilled into it for wires to pass through.`
-- `Attached flower, servo, and sensor to each MDF panel.`
+- `Made 12 small MDF panels for each flower as a separate module, with holes drilled into it for wires to pass through.`
 - `Made a larger MDF base to put together the flowers.`
+- `Attached flower, servo, and sensor to each MDF panel, connecting them to the larger base.`
 - `Secured wire connections from each module to the breadboard attached to the large base`
 - `Tested code with the build.`
 - `Playtesting with users.`
