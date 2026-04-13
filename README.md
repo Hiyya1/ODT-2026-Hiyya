@@ -121,9 +121,10 @@ List what inspired the project.
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
+| `Mechanised photosensitive sunflower` | `https://youtu.be/y2zYAaqX3dQ?si=pSSWIg-C4MEHfRHH` | `Servo mechanism of flower` |
+| `Blooming paper flower` | `https://youtu.be/1Wba5BJDXFo?si=aePu1WIVh2jADIu4` | `Umbrella mechanism to open and close flower` |
+| `Huge organza flower` | `https://youtu.be/Y1MOaF7WLTI?si=Q8hwwCcrK3A51m7s` | `Using translucent fabric to give a delicate, ethereal look to the flower` |
+| `???????????` | `??????????` | `???????` |
 
 ## 3.2 Original Twist
 What makes your project original?
