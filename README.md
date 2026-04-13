@@ -432,8 +432,8 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-initialise
 import libraries
+initialise
 assign ESP32 pins to ultrasonic sensors
 assign PCA pins to servos
 
