@@ -406,11 +406,11 @@ Include:
 **Response:**  
 - `When code runs, all sensors get triggered.`
 - `Each sensor corresponds to a flower with a servo.`
-- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 180 degrees.`
+- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 90 degrees.`
 - `The servo rotates with time delays for the flower to open up slowly.`
-- `The servo waits for 2-3 seconds, then slowly rotates back to its original position.`
+- `The servo waits for 1-2 seconds, then slowly rotates back to its original position.`
 - `During this time, the servo does not react to sensor input to avoid clashing signals and malfunction.`
-- `However, during this time, other servos can be activated by their respective sensors.`
+- `However, during this time, other servos cannot be activated by their respective sensors.`
 - `Once the servo is back to its original position, it can again be activated by the sensor, and the loop repeats until the code is running.`
 
 ## 10.3 Code Flowchart
@@ -432,20 +432,18 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-import libraries
-initialise
-assign ESP32 pins to ultrasonic sensors
-assign PCA pins to servos
+# import libraries
+# initialise PCA9685 and servo pins
+# assign ESP32 pins to ultrasonic sensors
 
-start loop
-trigger all sensors
-check duration till pulse received for each sensor separately
-for each sensor, if no object detected, go back to loop
-if object detected by sensor X:
-  rotate corresponding servo X slowly by 180 degrees
-  wait for 2 seconds
-  rotate in reverse by 180 degrees
-  go back to loop
+# start loop
+# trigger all sensors
+# get distance of object above sensors
+# if object detected by a sensor X at a distance of 10-50cm,
+# rotate corresponding servo X slowly by 90 degrees
+# wait for 1 second
+# rotate in reverse by 90 degrees
+# go back to sensor loop
 
 ```
 
