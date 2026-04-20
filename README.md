@@ -370,7 +370,7 @@ Describe the main electrical connections.
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img src="images/Circuit Diagram.jpeg" width="500">
 
 ## 9.4 Power Plan
 
