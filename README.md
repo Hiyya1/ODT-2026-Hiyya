@@ -124,7 +124,7 @@ List what inspired the project.
 | `Mechanised photosensitive sunflower` | `https://youtu.be/y2zYAaqX3dQ?si=pSSWIg-C4MEHfRHH` | `Servo mechanism of flower` |
 | `Blooming paper flower` | `https://youtu.be/1Wba5BJDXFo?si=aePu1WIVh2jADIu4` | `Umbrella mechanism to open and close flower` |
 | `Huge organza flower` | `https://youtu.be/Y1MOaF7WLTI?si=Q8hwwCcrK3A51m7s` | `Using translucent fabric to give a delicate, ethereal look to the flower` |
-| `???????????` | `??????????` | `???????` |
+| `Disney's Encanto - Isabela making flowers bloom` | `https://youtu.be/bBeZSuHI4Qc?si=EKJGsCYWJiIo_Y7u&t=28` | `The inspiration for the project's concept and colour scheme` |
 
 ## 3.2 Original Twist
 What makes your project original?
@@ -197,6 +197,7 @@ What is the smallest version of this project that still delivers the core experi
 What features are nice to have but not essential?
 
 - `Multiple flowers arranged in arrays`
+- `Flowers bloom simultaneously/independently and not one after the other`
 - `Flowers with multiple layers of petals`
 - `Flowers made of material(s) that are delicate and aesthetically pleasing`
 
@@ -234,7 +235,7 @@ Include:
 - `Input: Ultrasonic sensors placed at different points on the panel detect hand movement.`
 - `Processing: The sensors correspond to specific flowers based on proximity. When a sensor detects hand movement, the ESP32 sends instructions to the servo motor to rotate by a certain angle and open the flower. `
 - `Output: The flower(s) underneath the hand open and light up.`
-- `Physical structure: The flower uses an umbrella mechanism to open and close. A lever connects the servo to the flower slider that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic materials.`
+- `Physical structure: The flower uses an umbrella mechanism to open and close. A lever connects the servo to the flower slider that converts the rotational motion of the servo to the vertical motion required to open the flower. The structure is made by hand using basic craft materials.`
 - `App interaction: NA`
 
 ## 6.3 Input / Output Map
@@ -282,7 +283,7 @@ Add a sketch with labels showing:
 | Length | `1m` |
 | Width | `0.75m` |
 | Height | `0.25m` |
-| Estimated weight | `7 kg` |
+| Estimated weight | `4 kg` |
 
 ---
 
@@ -291,12 +292,12 @@ Add a sketch with labels showing:
 ## 8.1 Mechanical Features
 Check all that apply.
 
-- [ ] Gears
+- [x] Gears
 - [ ] Pulleys
 - [ ] Belt drives
 - [x] Linkages
 - [ ] Hinges
-- [x] Shafts
+- [ ] Shafts
 - [ ] Springs
 - [ ] Bearings
 - [ ] Wheels
@@ -321,7 +322,7 @@ If something moves, explain:
 **Response:**  
 - `The petals of the flower move, creating an illusion of the flower blooming.`
 - `Vertical movement of the slider causes the movement, using an umbrella mechanism.`
-- `The vertical distance for full movement is about 5 cm.`
+- `The vertical distance for full movement is about 3 cm.`
 - `Speed can be controlled/changed through the servo.`
 - `Umbrella mechanism doesn't work as planned, or servo rotation does not accurately convert to vertical motion.`
 
@@ -364,7 +365,6 @@ Describe the main electrical connections.
 - `ESP32 connected to LM2596.`
 - `12 servos connected to ESP32 through PCA.`
 - `12 ultrasonic sensors connected to ESP32.`
-- resistors, other things???????????
 
 ## 9.3 Circuit Diagram
 Insert a hand-drawn or software-made circuit diagram.
@@ -377,9 +377,9 @@ Insert a hand-drawn or software-made circuit diagram.
 | Question | Response |
 |---|---|
 | Power source | `Adapter` |
-| Voltage required | `[Write here]` |
-| Current concerns | `[Write here]` |
-| Safety concerns | `[Write here]` |
+| Voltage required | `5V` |
+| Current concerns | `Need adequate current to power 12 servos and 12 sensors` |
+| Safety concerns | `Overheating of ESP32 or power supply, faulty connections` |
 
 ---
 
@@ -406,11 +406,10 @@ Include:
 **Response:**  
 - `When code runs, all sensors get triggered.`
 - `Each sensor corresponds to a flower with a servo.`
-- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 90 degrees.`
+- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 45 degrees.`
 - `The servo rotates with time delays for the flower to open up slowly.`
-- `The servo waits for 1-2 seconds, then slowly rotates back to its original position.`
-- `During this time, the servo does not react to sensor input to avoid clashing signals and malfunction.`
-- `However, during this time, other servos cannot be activated by their respective sensors.`
+- `The servo waits for 2-3 seconds, then slowly rotates back to its original position.`
+- `During this time, other servos cannot be activated by their respective sensors.`
 - `Once the servo is back to its original position, it can again be activated by the sensor, and the loop repeats until the code is running.`
 
 ## 10.3 Code Flowchart
@@ -439,10 +438,10 @@ Suggested sequence:
 # start loop
 # trigger all sensors
 # get distance of object above sensors
-# if object detected by a sensor X at a distance of 10-50cm,
-# rotate corresponding servo X slowly by 90 degrees
-# wait for 1 second
-# rotate in reverse by 90 degrees
+# if object detected by a sensor X at a distance of 2-30cm,
+# rotate corresponding servo X slowly by 45 degrees
+# wait for 2 seconds
+# rotate in reverse by 45 degrees
 # go back to sensor loop
 
 ```
@@ -504,15 +503,15 @@ Insert a sketch or screenshot of the app interface.
 | `Adapter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `Breadboard (joined)` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `Jumper wires (male and female)` | `100` | `Yes` | `No` | `0` | `--` | `--` |
-| `Wire cutter` | `1` | `Yes` | `No` | `0` | `--` | `--` |
 | `LM2596 Buck Regulator` | `1` | `No` | `Yes` | `100` | `--` | `To supply sufficient power to multiple components` |
 | `PCA9685` | `1` | `No` | `No` | `0` | `--` | `To connect multiple servos to 2 ESP pins` |
 | `Ultrasonic sensor` | `12` | `Yes` | `No` | `0` | `--` | `To detect user's hand` |
 | `Servo motor` | `12` | `Yes` | `Yes (10)` | `1000` | `--` | `For accurate motion` |
 | `Chart paper` | `2` | `No` | `No` | `0` | `--` | `For flexible build construction` |
 | `Fabric` | `12 m` | `No` | `Yes` | `600` | `Polyester wrapping paper` | Translucent fabric for visual apppeal |
-| `Craft wire` | `1 pack (~10)` | `No` | `No` | `0` | `Aluminium, 24 gauge` | `To make the tabs/levers to connect servos to flower sliders` |
-| `MDF board` | `2 sq.m` | `No` | `No` | `0` | `3 mm` | `Sturdy enough for the multi-layered base of installation` |
+| `Styrofoam board` | `2 sq.m` | `No` | `Yes` | `200` | `2 cm` | `Soft surface for attaching components to the base of installation` |
+| `Mount board` | `2 sq.m` | `No` | `Yes` | `150` | `2 mm` | `Sturdy base for the installation` |
+| `MDF board` | `2 sq.m` | `No` | `No` | `0` | `3 mm` | `To cover up circuit wires` |
 
 ## 12.2 Material Justification
 Explain why you selected your main materials and components.
@@ -544,16 +543,16 @@ Examples:
 |---|---:|
 | Electronics | `1600` |
 | Mechanical parts | `--` |
-| Fabrication materials | `600` |
+| Fabrication materials | `950` |
 | Purchased extras | `--` |
 | Contingency | `--` |
-| **Total** | `2200` |
+| **Total** | `2550` |
 
 ## 12.5 Budget Reflection
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`I've tried to make it as cost-efficient as possible, I don't think anything else can be simplified for the required build.`
+`Utrasonic sensors and some servos will be shared with classmates. Other materials will probably have to bought.`
 
 ---
 
@@ -578,12 +577,12 @@ Include:
 |---|---|---|---:|---|---|---|
 | T1 | `[Finalize concept]` | `Hiyya` | `2` | `01/04/2026` | `None` | `Completed` |
 | T2 | `[Complete BOM]` | `Hiyya` | `1` | `07/04/2026` | `T1` | `Completed` |
-| T3 | `[Test electronics]` | `Hiyya` | `2` | `15/04/2026` | `T1` | `To Do` |
-| T4 | `[Build structure]` | `Hiyya` | `18` | `16/04/2026` | `T1` | `In progress` |
-| T5 | `[Write control code]` | `Hiyya` | `4` | `15/04/2026` | `T3` | `To Do` |
-| T6 | `[Integrate system]` | `Hiyya` | `4` | `18/04/2026` | `T4, T5` | `To Do` |
-| T7 | `[Playtest]` | `Hiyya` | `2` | `19/04/2026` | `T6` | `To Do` |
-| T8 | `[Refine and document]` | `Hiyya` | `4` | `20/04/2026` | `T7` | `In progress` |
+| T3 | `[Test electronics]` | `Hiyya` | `2` | `15/04/2026` | `T1` | `Completed` |
+| T4 | `[Build structure]` | `Hiyya` | `18` | `18/04/2026` | `T1` | `Completed` |
+| T5 | `[Write control code]` | `Hiyya` | `4` | `15/04/2026` | `T3` | `Completed` |
+| T6 | `[Integrate system]` | `Hiyya` | `4` | `20/04/2026` | `T4, T5` | `Completed` |
+| T7 | `[Playtest]` | `Hiyya` | `2` | `21/04/2026` | `T6` | `Completed` |
+| T8 | `[Refine and document]` | `Hiyya` | `4` | `21/04/2026` | `T7` | `Completed` |
 
 ## 13.3 Responsibility Split
 
@@ -630,9 +629,9 @@ Expected outcomes:
 
 ### Week 4 — Refine and Finish
 Expected outcomes:
-- [ ] Technical bugs reduced
-- [ ] Playtesting completed
-- [ ] Improvements made
+- [x] Technical bugs reduced
+- [x] Playtesting completed
+- [x] Improvements made
 - [ ] Documentation completed
 - [ ] Final build ready
 
@@ -642,8 +641,8 @@ Expected outcomes:
 |---|---|---|---|---|
 | Week 1 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
 | Week 2 | `Prototype the basic mechanism` | `Made a working prototype of flower` | `Need to add reinforcements to provide strength` | `Make all the flowers` |
-| Week 3 | `Finish build and start working on code and circuits` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `Integrate electronics and finish documentation` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 3 | `Finish build and start working on code and circuits` | `Made all flowers and base structure` | `Had to figure out a way to support the weight of the fabric to be lifted` | `Integrate build with circuits and code` |
+| Week 4 | `Integrate electronics and finish documentation` | `Circuits were integrated into the build and tested with code` | `Some servos weren't working, had to?????` | `Put together documentation and submit project for exhibition` |
 
 ---
 
@@ -673,8 +672,8 @@ What is the single biggest uncertainty in your project at this stage?
 | What Needs Testing | How You Will Test It | Success Condition |
 |---|---|---|
 | `Servo motors` | `Test each motor individually` | `Servo rotates correctly as per code` |
-| `[Mechanism movement]` | `Make 1 flower with servo connection and check if it works` | `Flower visibly opens and closes` |
-| `[Sensor behavior]` | `Test each sensor individually` | `Sensor detects movement of hand ~20cm away from it` |
+| `Mechanism movement` | `Make 1 flower with servo connection and check if it works` | `Flower visibly opens and closes` |
+| `Sensor behavior` | `Test each sensor individually` | `Sensor detects movement of hand ~20cm away from it` |
 
 ## 16.2 Playtesting Plan
 
@@ -691,7 +690,7 @@ What is the single biggest uncertainty in your project at this stage?
 | Date | Problem Found | Type | What You Tried | Result | Next Action |
 |---|---|---|---|---|---|
 | `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]` | `[What you did]` | `[Result]` | `[Next step]` |
+| `19/04/2026` | `Some servos weren't rotating but making a clicking sound` | `Mechanical` | `[What you did]` | `[Result]` | `[Next step]` |
 
 ## 16.4 Playtesting Notes
 
@@ -720,10 +719,10 @@ Include:
 - `First prototype of flower mechanism made using paper.`
 - `Built 12 flowers using the same mechanism, with reinforcements to support the fabric petals.`
 - `Tested flower movement with servo motor and code.`
+- `Built the full circuit with all components.`
 - `Made 12 small MDF panels for each flower as a separate module, with holes drilled into it for wires to pass through.`
-- `Made a larger MDF base to put together the flowers.`
+- `Made a larger styrofoam and mount board base to put together the flowers.`
 - `Attached flower, servo, and sensor to each MDF panel, connecting them to the larger base.`
-- `Secured wire connections from each module to the breadboard attached to the large base`
 - `Tested code with the build.`
 - `Playtesting with users.`
 - `Made small revisions and cleaned up the build.`
