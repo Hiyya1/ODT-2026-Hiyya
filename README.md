@@ -62,7 +62,7 @@ By the final review, this README should clearly show:
 
 
 ## 1.3 Project Title
-`Blooming Flowers`
+`The Garden of Blooming Flowers`
 
 ## 1.4 One-Line Pitch
 `A panel of blooming flowers which responds to the movement of your hand over it.`
@@ -75,7 +75,7 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project involves an interactive panel consisting of about 20 mechanised flowers. As the participant moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming open. This will hopefully create a unique visual and sensory experience for the participant, with a touch of whimsical magic and fairylike charm.
+`This project involves an interactive panel consisting of 12 mechanised flowers. As the participant moves their hand over this panel, the flower(s) just underneath respond to the hand movement by blooming open. This will hopefully create a unique visual and sensory experience for the participant, with a touch of whimsical magic and fairylike charm.
 The technologies involved in this project are ultrasonic sensors and servo motor mechanisms, controlled by a MicroPython code through an ESP32.`
 
 ---
@@ -200,6 +200,7 @@ What features are nice to have but not essential?
 - `Flowers bloom simultaneously/independently and not one after the other`
 - `Flowers with multiple layers of petals`
 - `Flowers made of material(s) that are delicate and aesthetically pleasing`
+- `LEDs on each flower that light up when the corresponding flower blooms`
 
 ---
 
@@ -283,7 +284,7 @@ Add a sketch with labels showing:
 | Length | `1m` |
 | Width | `0.75m` |
 | Height | `0.25m` |
-| Estimated weight | `4 kg` |
+| Estimated weight | `6 kg` |
 
 ---
 
@@ -406,9 +407,9 @@ Include:
 **Response:**  
 - `When code runs, all sensors get triggered.`
 - `Each sensor corresponds to a flower with a servo.`
-- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 45 degrees.`
+- `When a particular sensor detects an object, its corresponding servo is instructed to rotate by 90 degrees.`
 - `The servo rotates with time delays for the flower to open up slowly.`
-- `The servo waits for 2-3 seconds, then slowly rotates back to its original position.`
+- `The servo waits for 1-2 seconds, then slowly rotates back to its original position.`
 - `During this time, other servos cannot be activated by their respective sensors.`
 - `Once the servo is back to its original position, it can again be activated by the sensor, and the loop repeats until the code is running.`
 
@@ -439,9 +440,9 @@ Suggested sequence:
 # trigger all sensors
 # get distance of object above sensors
 # if object detected by a sensor X at a distance of 2-30cm,
-# rotate corresponding servo X slowly by 45 degrees
-# wait for 2 seconds
-# rotate in reverse by 45 degrees
+# rotate corresponding servo X slowly by 90 degrees
+# wait for 1 second
+# rotate in reverse by 90 degrees
 # go back to sensor loop
 
 ```
@@ -632,8 +633,8 @@ Expected outcomes:
 - [x] Technical bugs reduced
 - [x] Playtesting completed
 - [x] Improvements made
-- [ ] Documentation completed
-- [ ] Final build ready
+- [x] Documentation completed
+- [x] Final build ready
 
 ## 14.2 Weekly Update Log
 
@@ -642,7 +643,7 @@ Expected outcomes:
 | Week 1 | `Start working on build planning` | `Finalised idea` | `Need to make multiple flowers that interact with user` | `Plan build and mechanisms` |
 | Week 2 | `Prototype the basic mechanism` | `Made a working prototype of flower` | `Need to add reinforcements to provide strength` | `Make all the flowers` |
 | Week 3 | `Finish build and start working on code and circuits` | `Made all flowers and base structure` | `Had to figure out a way to support the weight of the fabric to be lifted` | `Integrate build with circuits and code` |
-| Week 4 | `Integrate electronics and finish documentation` | `Circuits were integrated into the build and tested with code` | `Some servos weren't working, had to?????` | `Put together documentation and submit project for exhibition` |
+| Week 4 | `Integrate electronics and finish documentation` | `Circuits were integrated into the build and tested with code` | `Some servos weren't working, had to reduce 12 flowers to 6` | `Put together documentation and submit project for exhibition` |
 
 ---
 
@@ -689,15 +690,18 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Date | Problem Found | Type | What You Tried | Result | Next Action |
 |---|---|---|---|---|---|
-| `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `19/04/2026` | `Some servos weren't rotating but making a clicking sound` | `Mechanical` | `[What you did]` | `[Result]` | `[Next step]` |
+| `19/04/2026` | `Some servos weren't rotating but making a clicking sound` | `Technical` | `Reduced the number of flowers from 12 to 6` | `Solved the issue partly` | `Modify code and some structural components` |
+| `20/04/2026` | `Servo motion was not opening flower properly` | `Mechanical` | `Secured servos and flowers with adhesives, made some supports with board and styrofoam` | `Partly worked, the flowers still didn't open as much as they should have` | `Try some other materials for supporting servos` |
 
 ## 16.4 Playtesting Notes
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| `Friend` | `They waved their hand some distance over the flowers` | `Since the distance was too much the servo didn't rotate` | `The enjoyed seeing the flower move and bloom` | `I edited the code for the sensor to detect objects upto 30cm above it.` |
+| `Peer` | `They moved their hand over the flowers` | `--` | `They liked the concept and said it felt magical!` | `--` |
+| `Classmate` | `They studied the flower mechanism using the demo flowers kept aside` | `--` | `They enjoyed the mechanism and immediately connected it to the motion of an umbrella` | `--` |
+| `Peer` | `They moved their hand over the flowers` | `They couldn't see the flower motion clearly, it was too minute` | `They liked the concept.` | `I tried to improve the mechanism using sunboard instead of styrofoam to support the servo.` |
+
 
 ---
 
@@ -722,8 +726,11 @@ Include:
 - `Built the full circuit with all components.`
 - `Made 12 small MDF panels for each flower as a separate module, with holes drilled into it for wires to pass through.`
 - `Made a larger styrofoam and mount board base to put together the flowers.`
-- `Attached flower, servo, and sensor to each MDF panel, connecting them to the larger base.`
+- `Attached flower, servo, and sensor to the styrofoam base.`
 - `Tested code with the build.`
+- `Found some servos not working as planned due to the extension wires that had to be used.`
+- `Brought down the project to 6 working flowers.`
+- `Added painted MDF panels to cover up wiring.`
 - `Playtesting with users.`
 - `Made small revisions and cleaned up the build.`
 
@@ -740,7 +747,7 @@ Suggested images:
 
 Example:
 ```md
-
+Images included in separate folder. Video compilation also included.
 
 
 ```
@@ -749,9 +756,9 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+| `v1` | `17/04/2026` | `Had 12 servos and 12 sensors in working condition with respective flowers` | `Original plan` |
+| `v2` | `19/04/2026` | `Brought it down to 6 flowers` | `Servos weren't working when connected via jumper wires for length extension` |
+| `v3` | `21/04/2026` | `Improved the mechanism of one of the flowers, supported the servo with firm sunboard insted of flexible styrofoam` | `The servo itself was moving, reducing the extent of motion of the flower` |
 
 ---
 
@@ -761,23 +768,24 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+`A panel of 6 colourful flowers made of fabric which move and bloom to some extent when they detect an object (hand) above them.`
 
 ## 18.2 What Works Well
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `The sensor detection works reasonably well.`
+- `The umbrella mechanism of the flower works well.`
+- `The colour scheme and overall aesthetic of the installation is visually appealing.`
+- `The code and the complex circuits work satisfactorily.`
 
 ## 18.3 What Still Needs Improvement
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `The connection between servo motion and flower opening motion needs to be more secure.`
+- `The remaining servos that didn't work as planned need fixing.`
+- `The structural integrity of the entire build could be better and more compact.
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
 
 **Response:**  
-`[Write here]`
+`The scope of the project reduced from 12 in theory to 6 in execution. Multiple changes had to be made as the project went along, especially with respect to material choices and mechanisms.`
 
 ---
 
@@ -789,7 +797,7 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+`I did the flower mechanism, code, and circuits well. The physical build and faulty parts slowed me down, especially while putting all the flowers and complex circuits together. I managed tasks reasonably well, but time management could definitely have been improved. I underestimated the amount of time it would take me to put all the components together and make it work.`
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -800,7 +808,7 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+`I learnt that testing parts separately is not enough; simple things like faulty jumper wire connections and length extensions can make a huge difference in the final working of the circuit. I found that a well-written code with appropriate comments and steps can save a lot of time and effort in later stages if issues arise with the circuits and/or physical build. Despite conducting detailed mechanism and structural testing, I learnt that nothing is foolproof when it comes to integrating electronics with physical mechanisms. `
 
 ## 19.3 Design Reflection
 What did you learn about:
@@ -812,37 +820,37 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+`I learnt that audiences and users are delighted when something responds to their actions, especially if it doesn't involve direct touch. For my installation particularly, I also found that aesthetic appeal is a huge part of the player's overall experience, even though it may not seem like much. With regard to the continuous process of trial and error, I learnt that iteration is an ongoing process and there is always scope for improvement in the smallest of things.`
 
 ## 19.4 If You Had One More Week
 What would you improve next?
 
 **Response:**  
-`[Write here]`
+`I would improve the servo mechanism of all the flowers. I would try to make all 12 servos work with specific extension wires. I would also consider adding LEDs to each flowers if time permits.`
 
 ---
 
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
-- [ ] Team details are complete
-- [ ] Project description is complete
-- [ ] Inspiration sources are included
-- [ ] Player journey is written
-- [ ] Sketches are added
-- [ ] BOM is complete
-- [ ] Purchase list is complete
-- [ ] Budget summary is complete
-- [ ] Mechanical planning is documented if applicable
+- [x] Team details are complete
+- [x] Project description is complete
+- [x] Inspiration sources are included
+- [x] Player journey is written
+- [x] Sketches are added
+- [x] BOM is complete
+- [x] Purchase list is complete
+- [x] Budget summary is complete
+- [x] Mechanical planning is documented if applicable
 - [ ] App planning is documented if applicable
-- [ ] Code flowchart is added
-- [ ] Task breakdown is complete
-- [ ] Weekly logs are updated
-- [ ] Risk register is complete
-- [ ] Testing log is updated
-- [ ] Playtesting notes are included
-- [ ] Build photos are included
-- [ ] Final reflection is written
+- [x] Code flowchart is added
+- [x] Task breakdown is complete
+- [x] Weekly logs are updated
+- [x] Risk register is complete
+- [x] Testing log is updated
+- [x] Playtesting notes are included
+- [x] Build photos are included
+- [x] Final reflection is written
 
 ---
 
